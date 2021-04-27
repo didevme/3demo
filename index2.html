@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script src="engine.js"></script>
+    <script src="model.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+<div class="mobile-container">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav" id="topnav" style="margin-right: -5%;">
+      
+      <a id="menu" style="position: relative;" href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+   
+      </a>
+      <div id="myLinks" style="padding: 2%; text-align: center;">
+          <h4 style="text-align: center; margin: 2%; font-weight: 100;">Select Color:</h4>
+        <button id="button" style="background-image: linear-gradient( 
+            45deg
+             , #4a0d0d, transparent);"></button>
+        <button id="button1" style="background-color: #d0ad33; background-image: linear-gradient(
+            45deg
+            , #bd7e0a, transparent);"></button>
+        <button id="button2" style="background-color: #33d045; background-image: linear-gradient( 
+            45deg
+             , #0e6f3e, transparent);"></button>
+        <button id="button3" style="background-color: #3362d0; background-image: linear-gradient( 
+            45deg
+             , #0e276f, transparent);"></button>
+        <button id="button4" style="background-color: black; background-image: linear-gradient( 
+            45deg
+             , #353535, transparent);"></button>
+              <button id="button5">Add plate</button>
+      </div>
+ 
+    </div>
+</div>
+
+    <!-- <div style="position: absolute; display: block; padding: 1%;">
+       
+        <button id="button" style="background-image: linear-gradient( 
+            45deg
+             , #4a0d0d, transparent);"></button>
+        <button id="button1" style="background-color: #d0ad33; background-image: linear-gradient(
+            45deg
+            , #bd7e0a, transparent);"></button>
+        <button id="button2" style="background-color: #33d045; background-image: linear-gradient( 
+            45deg
+             , #0e6f3e, transparent);"></button>
+        <button id="button3" style="background-color: #3362d0; background-image: linear-gradient( 
+            45deg
+             , #0e276f, transparent);"></button>
+        <button id="button4" style="background-color: black; background-image: linear-gradient( 
+            45deg
+             , #353535, transparent);"></button>
+              <button id="button5">Add plate</button>
+    </div> -->
+   
+    <canvas id="renderCanvas"></canvas>
+    <footer>
+        <a href="https://layalt.io" target="_blank">Powerer by: <img src="https://layalt.io/wp-content/uploads/2021/04/layalt-logo.svg" alt=""></a>
+    </footer>
+    <script src="apps.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+
+          if (x.style.display === "block") {
+            x.style.display = "none";
+            document.getElementById("topnav").style.marginRight = "0";
+            document.getElementById("menu").innerHTML = '<i class="fa fa-bars"></i>';
+          } else {
+            x.style.display = "block";
+            document.getElementById("topnav").style.marginRight = "-5%";
+            document.getElementById("menu").innerHTML = '<i class="fa fa-bars"></i> <h4 id="header">Controls</h4>';
+          }
+        }
+        </script>
+    
+   
+</body>
+</html>
